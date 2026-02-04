@@ -1,9 +1,4 @@
 public class WordReversal {
-    // take in a string
-    // divide up string into array by splitting at whitespace
-    // create new string that reads the array backwards
-    // print out new string
-
     private String original;
     private String reversed;
     private String[] split;
@@ -25,17 +20,12 @@ public class WordReversal {
         split = this.original.split(" ");
     }
 
-    public void printSplit() {
-        for(int i = 0; i < split.length; i++) {
-            System.out.println(split[i]);
-        }
-    }
-
     // set reverse string
     // by reading the split array backwards
     public void setReverse() {
         for(int i = split.length - 1; i >= 0; i--) {
             reversed += split[i];
+            // stops from adding unneeded space at end
             if(i != 0) {
                 reversed += " ";
             }
@@ -52,9 +42,7 @@ public class WordReversal {
         WordReversal reverseWord = new WordReversal();
         reverseWord.setOriginal("dog and cat are friends");
         reverseWord.splitOriginal();
-        reverseWord.printSplit();
         reverseWord.setReverse();
-        System.out.println("");
         reverseWord.printValues();
     }
 }
