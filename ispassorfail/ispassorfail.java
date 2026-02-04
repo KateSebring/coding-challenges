@@ -19,7 +19,7 @@ public class IsPassOrFail {
         result = scoreChecker.checkScore(49); 
         System.out.println(result);
 
-        result = scoreChecker.checkScore(55); 
+        result = scoreChecker.checkScore(40); 
         System.out.println(result);
     }
 }
