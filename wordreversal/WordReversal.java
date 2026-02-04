@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class WordReversal {
     // take in a string
     // divide up string into array by splitting at whitespace
@@ -6,17 +8,17 @@ public class WordReversal {
 
     private String original;
     private String reversed;
-    private ArrayList split;
+    private ArrayList<String> split;
     
     // initialize strings
-    public void WordReversal() {
+    public WordReversal() {
         this.original = "";
         this.reversed = "";
     }
 
     // set original based on input
     public void setOriginal(String input) {
-        
+        this.original = input;
     }
 
     // split original at each whitespace
