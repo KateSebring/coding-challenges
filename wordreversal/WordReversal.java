@@ -34,7 +34,12 @@ public class WordReversal {
     // set reverse string
     // by reading the split array backwards
     public void setReverse() {
-
+        for(int i = split.length - 1; i >= 0; i--) {
+            reversed += split[i];
+            if(i != 0) {
+                reversed += " ";
+            }
+        }
     }
 
     // print out strings
@@ -48,5 +53,8 @@ public class WordReversal {
         reverseWord.setOriginal("dog and cat are friends");
         reverseWord.splitOriginal();
         reverseWord.printSplit();
+        reverseWord.setReverse();
+        System.out.println("");
+        reverseWord.printValues();
     }
 }
